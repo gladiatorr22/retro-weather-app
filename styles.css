@@ -1,0 +1,140 @@
+/* styles.css */
+@font-face { 
+  font-family: 'NDot55'; 
+  src: url('Ndot_55.woff') format('woff');
+  font-display: swap; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ @keyframes stars-move {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                /* Moves the starfield slowly diagonally */
+                background-position: -10000px -10000px;
+            }
+        }
+.starfield-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Creating the starfield pattern using a repeating radial gradient */
+            background: repeating-radial-gradient(
+                #FFF 0px, 
+                #FFF 1px, 
+                transparent 1px, 
+                transparent 100px
+            ),
+            repeating-radial-gradient(
+                #FF8 0px, 
+                #FF8 1px, 
+                transparent 1px, 
+                transparent 150px
+            ),
+            #000000;
+            background-size: 200px 200px, 150px 150px;
+            animation: stars-move 1000s linear infinite;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        
+.scanline-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                rgba(18, 16, 16, 0.5) 0, 
+                rgba(18, 16, 16, 0.5) 1px, 
+                transparent 2px, 
+                transparent 3px
+            );
+            /* Allows clicks to pass through if you add content */
+            pointer-events: none; 
+            opacity: 0.15;
+            z-index: 100;
+        }        
+body {
+    font-family: 'NDot55';
+    background: #000 ;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden; 
+    position: relative;
+}
+
+.container {
+    font-family: 'NDot55';
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    font-family: 'NDot55';
+    width: 70%;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    outline: none;
+}
+
+button {
+    font-family: 'NDot55';
+    width: 25%;
+    padding: 10px;
+    background-color: #ea002b;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ea002b96;
+}
+
+#weather-info {
+    font-family: 'NDot55';
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    font-family: 'NDot55';
+    color: #ea002b;
+    margin-top: 20px;
+}
