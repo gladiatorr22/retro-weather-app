@@ -1,6 +1,7 @@
 Retro Weather App
 
 A simple, secure weather application with a unique sci-fi/retro terminal aesthetic. Built with plain HTML, CSS, and JavaScript, and deployed on Vercel.
+
 Live link : https://retro-weather-app.vercel.app/
 
 🚀 Description
