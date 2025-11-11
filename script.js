@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const descriptionDisplay = document.getElementById("description");
   const errorMessage = document.getElementById("error-message");
   const windSpeedDisplay = document.getElementById("wind-speed")
-  const API_KEY ="cda2b767f983b0c92bc8dd2820b35209" // ENV VARIABLES 
+  const API_KEY ="YOUR_API_KEY" // ENV VARIABLES 
 
   getWeatherBtn.addEventListener('click' , async ()=>{
     const city = cityInput.value.trim()
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(data);
     const {name,main,weather,wind} = data
     cityNameDisplay.textContent=name
-    temperatureDisplay.textContent=`Temperature : ${main.temp} °C`
-    descriptionDisplay.textContent=`Weather : ${weather[0].description}`
-    windSpeedDisplay.textContent = `Wind Speed : ${((wind.speed)*3.6).toFixed(1)} KM/H`
+    temperatureDisplay.textContent=`Temperature  :  ${main.temp} °C`
+    descriptionDisplay.textContent=`Weather  :  ${weather[0].description}`
+    windSpeedDisplay.textContent = `Wind Speed  :  ${((wind.speed)*3.6).toFixed(1)} KM/H`
     weatherInfo.classList.remove('hidden')
     errorMessage.classList.add('hidden')
   }

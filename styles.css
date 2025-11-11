@@ -107,12 +107,21 @@ input[type="text"] {
     color: #FFF;
     outline: none;
 }
+input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active {
+            -webkit-text-fill-color: #FFF !important; 
+            box-shadow: 0 0 0 100px #1f1f1f inset !important;
+            font-family: 'NDot55';
+            transition: background-color 5000s ease-in-out 0s;
+        }
 
 button {
     font-family: 'NDot55';
     width: 25%;
     padding: 10px;
-    background-color: #ea002b;
+    background-color: #CE2029 ;
     border: none;
     border-radius: 5px;
     color: #FFF;
@@ -121,7 +130,7 @@ button {
 }
 
 button:hover {
-    background-color: #ea002b96;
+    background-color:#ce2029bb ;
 }
 
 #weather-info {
@@ -135,6 +144,6 @@ button:hover {
 
 #error-message {
     font-family: 'NDot55';
-    color: #ea002b;
+    color: #CE2029;
     margin-top: 20px;
 }
